@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout01"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primeLight"
+    tools:context=".CustomerDetails">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_img2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/pinterest_profile_image"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2.5dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:transitionName="trans01"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout02"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/round_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline1">
+
+        <Button
+            android:id="@+id/transferMoney"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="@color/primeLight"
+            android:background="@drawable/round_button_bg"
+            android:text="Transfer Money"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/balance" />
+
+        <TableLayout
+            android:id="@+id/table01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:background="@drawable/rounded_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phoneNo">
+
+            <TableRow>
+
+                <TextView
+                    android:background="@color/white"
+                    android:layout_margin="5dp"
+                    android:padding="3dip"
+                    android:text="@string/AccountNo"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:background="@color/white"
+                    android:layout_margin="5dp"
+                    android:id="@+id/AccNo"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:text="XXXXXXXXXXXX1231"
+                    android:textColor="@color/red"
+                    android:textSize="20dp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:background="@color/white"
+                    android:layout_margin="5dp"
+                    android:padding="3dip"
+                    android:text="@string/ifsc"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:background="@color/white"
+                    android:layout_margin="5dp"
+                    android:id="@+id/ifscCode"
+                    android:padding="3dip"
+                    android:text="ABC09876541"
+                    android:textAlignment="center"
+                    android:textColor="@color/orange"
+                    android:textSize="20dp" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/round_button_bg"
+            android:drawablePadding="5dp"
+            android:padding="5dp"
+            android:text="2000"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            app:drawableStartCompat="@drawable/ic_baseline_account_balance_24" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="ABHINAV PANDEY"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/phoneNo"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="5dp"
+            android:text="6392579668"
+            android:textColor="@color/primeLight"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/transferMoney"
+            app:drawableStartCompat="@drawable/ic_baseline_call_24"
+            app:drawableTint="@color/primeLight" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:text="pabhinav300@gmail.com"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="23dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:drawableStartCompat="@drawable/ic_baseline_email_24"
+            app:drawableTint="@color/yellow" />
+        <Button
+            android:id="@+id/transactionsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_marginTop="21dp"
+            android:backgroundTint="@color/yellow"
+            android:drawableEnd="@drawable/ic_baseline_arrow_circle_right_24"
+            app:layout_constraintTop_toBottomOf="@id/table01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Transactions"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.28" />
+</androidx.constraintlayout.widget.ConstraintLayout>
